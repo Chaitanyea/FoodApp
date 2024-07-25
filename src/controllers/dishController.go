@@ -57,12 +57,10 @@ func GetDish(responseWriter http.ResponseWriter, request *http.Request) {
 func CreateDish(responseWriter http.ResponseWriter, request *http.Request) {
 	// Initialize a new instance of Dish
 	newDish := models.Dish{}
-	// Decode the JSON request body into the newDish instance
-	decoder := json.NewDecoder(request.Body)
-	err := decoder.Decode(&newDish)
-	//Decoding error
+	// Parse the JSON from request body into the newDish instance
+	err := util.ParseJson(request, &newDish)
 	if err != nil {
-		responseWriter.WriteHeader(http.StatusBadRequest)
+		responseWriter.WriteHeader(http.StatusInternalServerError)
 		log.Fatal(err)
 		return
 	}
