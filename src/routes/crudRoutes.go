@@ -5,7 +5,7 @@ import (
 	"net/http"
 )
 
-var FoodAppRoutes = func(router http.ServeMux) {
+var FoodAppRoutes = func(router *http.ServeMux) {
 	router.HandleFunc("PUT /createDish", controllers.CreateDish)
 	router.HandleFunc("GET /getDish/", controllers.GetAllDish)
 	router.HandleFunc("GET /updateDish/:id", controllers.UpdateDish)

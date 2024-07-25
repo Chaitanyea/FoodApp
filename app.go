@@ -1,8 +1,14 @@
 package main
 
-import "GoSQLReactProject/src/util"
+import (
+	"GoSQLReactProject/src/routes"
+	"log"
+	"net/http"
+)
 
 func main() {
-	x := util.GetDb()
-	x.Get("")
+	router := http.NewServeMux()
+	routes.FoodAppRoutes(router)
+	http.Handle("/", router)
+	log.Fatal(http.ListenAndServe(":8080", nil))
 }
