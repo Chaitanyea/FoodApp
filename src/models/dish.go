@@ -13,6 +13,7 @@ type Dish struct {
 	Name   string  `json:"name"`
 	Price  int     `json:"price"`
 	Rating float32 `json:"rating"`
+	Link   string  `json:"link"`
 }
 
 // Init populate global Db for class, initialize with model
