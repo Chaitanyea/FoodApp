@@ -10,9 +10,9 @@ var db *gorm.DB
 
 type Dish struct {
 	gorm.Model
-	Name   string `json:"name"`
-	Price  int    `json:"price"`
-	Rating int    `json:"rating"`
+	Name   string  `json:"name"`
+	Price  int     `json:"price"`
+	Rating float32 `json:"rating"`
 }
 
 // Init populate global Db for class, initialize with model
