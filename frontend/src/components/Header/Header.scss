@@ -1,0 +1,45 @@
+@import '../../common/colours.scss';
+
+.header {
+    background: linear-gradient(90deg,#703f85, #433f45, #442f6f, $header);
+    background-size: 300% 180%;
+    animation: color 25s ease-in-out infinite;
+    height: 80px;
+    padding: 0px 50px;
+    display: flex;
+    align-items:center;
+    justify-content: space-around;
+}
+@keyframes color {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.logo {
+    color: #FFFFFF;
+    font-size: 42px;
+    font-weight: 500;
+    font-family: "Lucida Handwriting", cursive;
+    transition: 0.6s;
+}
+.logo:hover{
+    font-size: 50px;
+}
+
+.wine-image img{
+    width: 55px;
+    height: 55px;
+    transition: 0.5s;
+    filter: blur(0.5px);
+}
+.wine-image img:hover{
+    cursor: pointer;
+    filter: none;
+}

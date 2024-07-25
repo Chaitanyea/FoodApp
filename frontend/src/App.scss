@@ -1,0 +1,17 @@
+@import "../src/common/colours.scss";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Open Sans", sans-serif;
+    font-style: italic;
+}
+
+body {
+    background-color: $background;
+}
+
+.container {
+    margin: 0px 40px;
+}
