@@ -1,7 +1,10 @@
 package models
 
-import "gorm.io/gorm"
-import "GoSQLReactProject/src/util"
+import (
+	"GoSQLReactProject/src/util"
+	"fmt"
+	"gorm.io/gorm"
+)
 
 var db *gorm.DB
 
@@ -12,8 +15,8 @@ type Dish struct {
 	Rating int    `json:"rating"`
 }
 
-// initDBWithModel start DB, catch any error
-func initDBWithModel() {
+// Init populate global Db for class, initialize with model
+func Init() {
 	db = util.GetDb()
 	if err := db.AutoMigrate(&Dish{}); err != nil {
 		panic(err)
@@ -22,6 +25,9 @@ func initDBWithModel() {
 
 // CreateDish in Database
 func (d *Dish) CreateDish() *Dish {
+	if db == nil {
+		fmt.Println("Db is nil")
+	}
 	db.Create(&d)
 	return d
 }
