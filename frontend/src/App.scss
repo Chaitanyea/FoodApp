@@ -9,9 +9,24 @@
 }
 
 body {
-    background-color: $background
+    background: linear-gradient(#000000, #180000, #0000005e, #140011);
+    background-size: 300% 300%;
+    animation: gradientAnimation 20s infinite;
+}
+
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
 }
 
 .container {
     margin: 0px 40px;
 }
+
