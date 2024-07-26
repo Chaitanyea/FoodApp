@@ -1,9 +1,10 @@
 import React from 'react';
+import './card.scss'
 
 const home = () => {
     return (
-        <div>
-            Home
+        <div className='outer-card'>
+            
         </div>
     );
 };

@@ -1,9 +1,10 @@
 @import '../../common/colours.scss';
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
 .header {
     background: linear-gradient(90deg, rgba(112, 63, 133, 0.8), rgba(67, 63, 69, 0.8), rgba(68, 47, 111, 0.8), rgba(68, 47, 111, 0.8));
     background-size: 300% 180%;
-    animation: color 25s ease-in-out infinite;
+    animation: color 10s ease-in-out infinite;
     height: 80px;
     padding: 0px 50px;
     z-index: 1000;    
@@ -31,8 +32,9 @@
 .logo {
     color: #FFFFFF;
     font-size: 42px;
+    font-family: "Roboto", sans-serif;
     font-weight: 500;
-    font-family: "Copperplate", fantasy;
+    font-style: normal;
     transition: 0.6s;
 }
 .logo:hover{
