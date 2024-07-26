@@ -25,7 +25,6 @@ const Home = () => {
 
             </div>
             <div className='list'>
-                <img src={wine} ></img>
                 <List>
 
                 </List>

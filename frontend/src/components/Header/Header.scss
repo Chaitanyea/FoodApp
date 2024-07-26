@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
 .header {
-    background: linear-gradient(90deg, rgba(112, 63, 133, 0.8), rgba(67, 63, 69, 0.8), rgba(68, 47, 111, 0.8), rgba(68, 47, 111, 0.8));
+    background: linear-gradient(90deg, rgb(255, 255, 255), rgb(198, 147, 224), rgb(241, 241, 241), rgba(245, 243, 184, 0.8));
     background-size: 300% 180%;
     animation: color 10s ease-in-out infinite;
     height: 80px;
@@ -30,12 +30,13 @@
 }
 
 .logo {
-    color: #FFFFFF;
-    font-size: 42px;
+    color: #000000;
+    font-size: 50px;
     font-family: "Roboto", sans-serif;
-    font-weight: 500;
+    font-weight: 700;
     font-style: normal;
     transition: 0.6s;
+    text-decoration: none; /* Add this line to remove the underline */
 }
 .logo:hover{
     font-size: 54px;
