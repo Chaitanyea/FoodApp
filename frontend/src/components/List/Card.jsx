@@ -9,7 +9,7 @@ const home = (props) => {
         <div className='outer-card'>
             <div className='card-border'>
                 <div className='card-top'>
-                    <Link to={`/getDish/${data.name}`} >
+                    <Link to={`/getDish/${data.ID}`} >
                     <img src={data.link} alt={data.name} className='image'></img>
                     </Link>
                 </div>

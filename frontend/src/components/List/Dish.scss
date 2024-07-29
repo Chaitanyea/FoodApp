@@ -1,0 +1,29 @@
+@import '../../common/colours.scss';
+
+.Dish-outer {
+    margin-top: 80px;/* add the desired margin-top value here */;
+}
+
+.Dish-back{
+    background: radial-gradient(rgb(180, 58, 58),
+                rgb(67, 63, 69),
+                rgb(164, 77, 119),
+                rgba(222, 25, 25, 0.8));
+        background-size: 300% 180%;
+        animation: color 20s ease-in-out infinite;
+        margin: 20px 0px;
+        border-radius: 50px;
+}
+@keyframes color {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
