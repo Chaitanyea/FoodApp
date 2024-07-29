@@ -14,19 +14,18 @@ const addDishPage = () => {
     const handleSave = () => {
         const data = {
             name,
-            price,
-            rating,
+            price: parseInt(price), 
+            rating : parseFloat(rating),
             link
         }
         dishApi.put('/createDish', data)
         .then(() => {
             console.log(data)
-            navigate(0)
             navigate('/');
         })
         .catch((err) => {
             console.log(err);
-            navigate('/error/');
+            //navigate('/error/');
         });
     }
 

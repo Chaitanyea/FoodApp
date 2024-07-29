@@ -19,6 +19,7 @@ const home = (props) => {
                         {data.name}
                         </h2>
                         <h4 className='rating'>{data.rating}</h4>
+                        <h4 className='rating'>{data.price}</h4>
                     </div>
                 </div>
             </div>
