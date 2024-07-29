@@ -5,6 +5,7 @@ import Header from './components/Header/Header'
 import Footer from './components/Footer/Footer'
 import detail from './components/List/Dish'
 import errorpage from './components/Error/Errorpage'
+import addDishPage from './components/AddDish/addDishPage'
 
 function App() {
 
@@ -16,7 +17,8 @@ function App() {
       <Routes>
         <Route path='/' Component={Home}></Route>
       <Route path='/getDish/:id' Component={detail}></Route>
-      <Route Component={errorpage}></Route>
+      <Route path ='/error/'Component={errorpage}></Route>
+      <Route path ='/addDish/' Component = {addDishPage}></Route>
       </Routes>
       </div>
       <Footer></Footer>

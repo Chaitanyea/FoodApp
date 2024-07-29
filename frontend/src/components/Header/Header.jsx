@@ -9,9 +9,11 @@ const header = () => {
             <Link to= "/" className='Link'>
                 <div className='logo'> Brominos </div>
             </Link>
-            <div className='wine-image'>
+            <Link to ='/addDish/'>
+                <div className='wine-image'>
                 <img src= {wine} alt='wine'></img>
             </div>
+            </Link>
         </div>
     )
 };

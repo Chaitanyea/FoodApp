@@ -1,0 +1,76 @@
+@import '../../common/colours.scss';
+
+.add-outer{
+    margin-top: 80px;
+}
+
+.add-border{
+    background: radial-gradient(rgb(180, 58, 58),
+            rgb(67, 63, 69),
+            rgb(164, 77, 119),
+            rgba(222, 25, 25, 0.8));
+    background-size: 300% 180%;
+    animation: color 20s ease-in-out infinite;
+    margin: 20px 0px;
+    margin-top: 150px;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 50px;
+    width: 800px;
+    min-height: 500px;
+    margin-bottom: 100px;
+    display:grid;
+    justify-items: center;
+    justify-content:baseline;
+}
+
+@keyframes color {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.add-coloumn{
+    margin-top: 20px;
+}
+
+.input-tab {
+    height: 40px;
+    width: 250px;
+    border-radius: 10px;
+    background: transparent;
+    opacity: 0.5;
+    transition: 0.8s;
+
+    &:focus {
+        background: gold;
+        opacity: 0.5s;
+        mix-blend-mode: multiply;
+    }
+}
+
+.add-heading{
+    color: rgb(0, 0, 0);
+    font: 500;
+    margin-right: 30px;
+}
+
+.save-button{
+    opacity: 0.2;
+    width: 100px;
+    height: 60px;
+    transition: 1s;
+}
+.save-button:hover{
+    background: transparent;
+    opacity: 1;
+    filter: brightness(100%);
+}
