@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import './Dish.scss';
 import dishApi from '../../common/apis/dishApi';
-import { useParams } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
+import Icon from 'react-crud-icons';
 
 const Dish = () => {
     const { id } = useParams();
@@ -20,12 +21,30 @@ const Dish = () => {
         fetchData();
     }, [id]);
 
+    const handleDelete = async () => {
+        try {
+            await dishApi.delete(`/deleteDish/${id}`);
+        } catch (error) {
+            console.error(error);
+        }
+    };
+
     return (
         <div className='Dish-outer'>
             <div className='Dish-back'>
                 {dishData && (
                     <img src={dishData.link} alt={dishData.name} className='dish-image' />
                 )}
+                <div className='icon'> 
+                    <Link to= '/'>
+                        <Icon
+                        name="delete"
+                        theme="light"
+                        size="small"
+                        onClick={handleDelete}
+                    />
+                    </Link>
+                </div>
             </div>
         </div>
     );
