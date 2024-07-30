@@ -16,19 +16,13 @@ const Dish = () => {
     const navigate = useNavigate();
 
     const handleSave = async () => {
-        try {
-            await dishApi.delete(`/deleteDish/${id}`)
-        } catch (error) {
-            console.error(error);
-            useNavigate('/error/')
-        }
         const data = {
             name,
             price: parseInt(price),
             rating: parseFloat(rating),
             link
         }
-        await dishApi.put(`/createDish`, data)
+        await dishApi.patch(`/updateDish/${id}`, data)
         .then(() => {
             navigate('/')
         })
